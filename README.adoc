@@ -1,0 +1,47 @@
+= WPF/XAML WpfExercise
+
+== Overview
+
+This app creates and renders a data structure.
+The app is composed of 3 UI elements:
+
+|===
+| Control | purpose
+
+| Button | Generate a data structure with random values
+| TextBlock | Text representation of a data structure
+| ? | UI Control representation of a data structure
+|===
+
+You are to implement the UI Control portion of this app.
+
+== Data Structure
+
+The data structure is defined in `Node.cs`.
+
+[,csharp]
+----
+namespace WpfExercise
+{
+    public class Node
+    {
+        public string Text { get; set; }
+        public ObservableCollection<Node> Children { get; } = new ObservableCollection<Node>();
+    }
+}
+----
+
+== Behavior
+
+When the button "Populate" is clicked:
+
+* the data structure is randomly populated
+* a textual representation of the data structure is displayed in the TextBlock
+* a UI control representation of the data structure is displayed below the TextBlock
+
+
+== Exercise Tasks
+
+* inspect the data structure and determine a UI control for the app
+* define the UI control in `MainWindow.xaml`
+* update the UI control in  `MainWindow.xaml.cs::UpdateUIControl`
